@@ -2,9 +2,8 @@ import BookingForm from "./Booking-form";
 
 export default function ContactUs() {
   return (
-    <>
-      <div className="w-full flex md:flex-row flex-col container mx-auto justify-center items-center">
-        <section id="contact-us" className="bg-gray-100  flex-1">
+    <div className="w-full flex md:flex-row flex-col container mx-auto justify-center items-center">
+        <section id="contact-us" className="flex-1">
           <div className="container mx-auto px-6 md:px-12 lg:px-24">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
               Get in Touch with Us!
@@ -47,6 +46,5 @@ export default function ContactUs() {
           <BookingForm />
         </div>
       </div>
-    </>
   );
 }

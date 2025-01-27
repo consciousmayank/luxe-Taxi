@@ -11,9 +11,7 @@ export default function Home() {
       <ImageSlider />
       <TaxiDetails />
       <AboutUs /> 
-      <div className="p-10 bg-gray-100">
       <ContactUs />
-      </div>
     </>
   );
 }
