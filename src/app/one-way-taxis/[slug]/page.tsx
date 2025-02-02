@@ -3,7 +3,7 @@ import Image from "next/image";
 import OneWayTaxiBookingForm from "@/app/_components/OneWayTaxiBookingForm";
 import { oneWayTaxis } from "@/data/one-way-taxis";
 
-export default async function TaxiDestination({ params }: { params: { slug: string } }) {
+export default async function TaxiDestination({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const destination = oneWayTaxis[slug];
 

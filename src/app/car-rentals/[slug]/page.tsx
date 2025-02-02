@@ -7,13 +7,14 @@ import { getCar, getAllCarSlugs } from "@/data/cars";
 import { notFound } from "next/navigation";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const car = getCar(params.slug);
+  const slug = await params;
+  const car = getCar(slug.slug);
 
   if (!car) {
     return {
@@ -35,8 +36,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function CarPage({ params }: Props) {
-  const car = getCar(params.slug);
+export default async function CarPage({ params }: Props) {
+  const slug = await params;
+  const car = getCar(slug.slug);
 
   if (!car) {
     notFound();
@@ -103,11 +105,11 @@ export default function CarPage({ params }: Props) {
                 <div className="border-b-2 border-yellow-500 w-12 mb-4"></div>
 
                 <div>
-                  {getAllCarSlugs().map((slug) => (
+                  {getAllCarSlugs().map(async (slug) => (
                     <li 
                       key={slug}
                       className={`${
-                        params.slug === slug
+                        (await params).slug === slug
                           ? "text-yellow-500 font-medium"
                           : "text-gray-600 hover:text-yellow-500"
                       } flex items-center gap-2`}

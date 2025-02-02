@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaCar, FaCalendarAlt, FaMapMarkerAlt, FaUser, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaCalendarAlt, FaMapMarkerAlt, FaUser, FaPhone, FaEnvelope } from "react-icons/fa";
 
 interface OneWayTaxiBookingFormProps {
   fromCity: string;

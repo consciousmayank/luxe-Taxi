@@ -4,6 +4,7 @@ import { getTourPackageBySlug, tourPackages } from '@/data/tour-packages';
 import TourBookingForm from '@/app/_components/TourBookingForm';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { FormData } from '@/types/tourbookingform';
 
 interface Props {
   params: Promise<{
@@ -12,14 +13,6 @@ interface Props {
   }>;
 }
 
-interface BookingFormData {
-  fullName: string;
-  email: string;
-  phone: string;
-  travelDate: string;
-numberOfTravelers: number;
-  specialRequirements?: string;
-}
 
 async function delay(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -62,7 +55,7 @@ export default async function TourPackageDetail({ params }: Props) {
     notFound();
   }
 
-  async function handleBookingSubmit(data: BookingFormData) {
+  async function handleBookingSubmit(data: FormData) {
     'use server';
     // TODO: Implement booking submission logic
     console.log('Booking submitted:', data);

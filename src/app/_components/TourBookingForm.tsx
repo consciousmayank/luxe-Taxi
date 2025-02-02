@@ -2,20 +2,14 @@
 
 import { useState } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
+import { FormData } from '@/types/tourbookingform'
 
 interface TourBookingFormProps {
   tourTitle: string;
   onSubmit: (data: FormData) => void;
 }
 
-interface FormData {
-  fullName: string;
-  email: string;
-  mobile: string;
-  travelDate: string;
-  numberOfTravelers: string;
-  specialRequirements: string;
-}
+
 
 export default function TourBookingForm({ tourTitle, onSubmit }: TourBookingFormProps) {
   const [formData, setFormData] = useState<FormData>({
