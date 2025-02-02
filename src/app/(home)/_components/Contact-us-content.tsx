@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function AboutUs() {
+export default function ContactUsContent() {
     return (
         <section id="about-us" className="bg-gray-50 py-16">
           <div className="container mx-auto px-6 md:px-12 lg:px-24">

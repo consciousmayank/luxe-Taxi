@@ -47,3 +47,110 @@
   --ring: 46 100% 47.6%;
   --radius: 1rem;
 }
+
+@keyframes rollText {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  55% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add this class to any link or text element you want to animate */
+.roll-on-hover {
+  @apply relative inline-block overflow-hidden;
+}
+
+.roll-on-hover:hover {
+  animation: rollText 0.8s ease-in-out;
+}
+
+/* Add hover slide animation */
+.slide-on-hover {
+  @apply relative inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-on-hover:hover {
+  animation: slide 1.5s ease-in-out;
+}
+
+
+
+
+/* Gradient text styles */  
+.text-gradient {
+  background: linear-gradient(to right, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-animated {
+  background: linear-gradient(
+    to right,
+    hsl(var(--primary)) 0%,
+    hsl(var(--secondary)) 50%,
+    hsl(var(--primary)) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide {
+  animation: slide 1.5s ease-in-out infinite;
+}
+
+
+/* Usage examples:
+ * 
+ * Static gradient:
+ * <h1 className="text-gradient">Your Text Here</h1>
+ *
+ * Animated gradient:
+ * <p className="text-gradient-animated">Your Animated Text Here</p>
+ *
+ * You can combine with other Tailwind classes:
+ * <h2 className="text-4xl font-bold text-gradient">Styled Gradient Text</h2>
+ */
+

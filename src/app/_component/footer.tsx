@@ -1,17 +1,19 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="">
-      <div className="bg-slate-300 py-12 container mx-auto px-4">
+    <footer className="flex flex-col items-center justify-center py-4 bg-gray-100">
+      <div className="w-full h-[1px] bg-black opacity-10"></div>
+      <div className="py-12 container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Your Taxi Company</h3>
+            <h3 className="text-xl font-bold mb-4">Epic Journey Cabs</h3>
             <p className="text-sm">
-              Professional taxi service providing safe and reliable transportation
-              24/7.
+              Epic Journey Cabs, offer a best taxi Service in Ludhiana. We are
+              dealing with one way taxi, airport transfer, outstation & local
+              tours. 24/7.
             </p>
           </div>
 
@@ -46,9 +48,12 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li>Phone: (123) 456-7890</li>
-              <li>Email: info@yourtaxi.com</li>
-              <li>Address: 123 Taxi Street</li>
+              <li>Phone: +91 9996179322</li>
+              {/* <li>Email: info@yourtaxi.com</li> */}
+              <li>
+                Address: Skycity, Gulabhgarh road Dera Bassi, S.A.S Nagar,
+                Punjab
+              </li>
             </ul>
           </div>
 

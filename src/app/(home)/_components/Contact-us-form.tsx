@@ -1,8 +1,8 @@
 import BookingForm from "./Booking-form";
 
-export default function ContactUs() {
+export default function ContactUsForm() {
   return (
-    <div className="w-full flex md:flex-row flex-col container mx-auto justify-center items-center">
+    <div className="w-full flex md:flex-row flex-col container mx-auto justify-center items-center p-10">
         <section id="contact-us" className="flex-1">
           <div className="container mx-auto px-6 md:px-12 lg:px-24">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
@@ -21,23 +21,23 @@ export default function ContactUs() {
                   Contact Information
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  <span className="font-semibold">Address:</span>
-                  123 Main Street, Downtown Avenue, Cityville, 56789
+                  <span className="font-semibold">Address: </span>
+                  Skycity, Gulabhgarh road Dera Bassi, S.A.S Nagar, Punjab
                 </p>
                 <p className="text-gray-600 mb-4">
                   <span className="font-semibold">Phone:</span>
-                  +1 (123) 456-7890
-                </p>
-                <p className="text-gray-600 mb-4">
-                  <span className="font-semibold">Email:</span>
-                  support@carrentalapp.com
+                  +91 9996179322
                 </p>
                 <p className="text-gray-600">
+                  <span className="font-semibold">Email:</span>
+                  Gurvindersoni9311@gmail.com
+                </p>
+                {/* <p className="text-gray-600">
                   <span className="font-semibold">Working Hours:</span>
                   <br />
                   Monday to Friday: 9 AM - 6 PM Saturday: 10 AM - 4 PM Sunday:
                   Closed
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
