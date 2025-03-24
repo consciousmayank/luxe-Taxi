@@ -1,6 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Our services",
+};
+
 const services = [
   {
     slug: 'one-way-taxi-service',

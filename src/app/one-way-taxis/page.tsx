@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { oneWayTaxis } from "@/data/one-way-taxis";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "One Way Taxi Services | Epic Journey Cabs",
+  description: "Book your one-way taxi for outstation trips to various destinations",
+};
+
 export default function OneWayTaxis() {
   return (
     <div className="container mx-auto px-4 py-8">
